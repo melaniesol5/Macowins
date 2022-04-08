@@ -1,11 +1,12 @@
 
 //Requerimiento 1
-// Necesito lograr polimorfismo entre las clases y por eso utilizo una Interfaz.
+// Necesito lograr polimorfismo entre las clases y por eso utilizo una Interfaz y utilizo composición, 
+//la clase Prenda conoce su estado y puede cambiar.
 
 class Prenda {
     Estado estado;
     Double precioBase;
-    precio(){return precioBase;}
+    precio(){return estado.precioFinal(Double precioBase);}
 }
 
 public Interface Estado{
