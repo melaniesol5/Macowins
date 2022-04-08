@@ -85,4 +85,12 @@ class VentaTarjeta extends Venta{
     }
 }
 
+class Negocio{
+    List <Venta> ventas;
+
+    gananciasDe(unDia){
+        ventas.filter(venta -> venta.fecha == unDia).sum(venta -> venta.importeFinal());
+    }
+}
+
 
